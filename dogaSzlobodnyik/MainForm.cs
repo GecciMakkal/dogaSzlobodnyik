@@ -23,9 +23,30 @@ namespace dogaSzlobodnyik
 
         private void BtnSzamolj_Click(object? sender, EventArgs e)
         {
-            if (muveletjel==)
-            {
 
+            elsoadat = int.Parse(tbxElsoadat.Text);
+            masodikadat = int.Parse(tbxMasodikAdat.Text);
+            if (muveletjel == '+')
+            {
+                lblEredmeny.Text = $"{elsoadat + masodikadat}";
+            }
+            else
+            {
+                if (muveletjel == '-')
+                {
+                    lblEredmeny.Text = $"{elsoadat - masodikadat}";
+                }
+                else
+                {
+                    if (muveletjel == '*')
+                    {
+                        lblEredmeny.Text = $"{elsoadat * masodikadat}";
+                    }
+                    else
+                    {
+                        lblEredmeny.Text = $"{elsoadat / masodikadat}";
+                    }
+                }
             }
 
         }
